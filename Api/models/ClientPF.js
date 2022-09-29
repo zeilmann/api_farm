@@ -15,8 +15,8 @@ async new(Ativo,NomeCompleto,CPF,Logradouro,Numero,Complemento,Bairro,UF,Municip
 
 async findById(id){
     try{
-        var result = await knex.select([["Ativo","NomeCompleto","CPF","Logradouro","Numero","Complemento","Bairro","UF","Municipio","CEP","Telefone","Celular"
-        ,"WhatsApp","Email","Obs","CustomersPFcol"]]).where({Id:id}).table("customerspf");
+        var result = await knex.select(["Ativo","NomeCompleto","CPF","Logradouro","Numero","Complemento","Bairro","UF","Municipio","CEP","Telefone","Celular"
+        ,"WhatsApp","Email","Obs","CustomersPFcol"]).where({Id:id}).table("customerspf");
         
         if(result.length > 0){
             return result[0];

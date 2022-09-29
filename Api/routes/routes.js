@@ -29,6 +29,7 @@ router.get("/clientPFF",ClientPFController.listAll);
 
 
 router.get("/clientPF/:id",AdminAuth,ClientPFController.findUser);
+router.get("/clientPFF/:id",ClientPFController.findUser);
 router.delete("/deleteClientPF/:id",AdminAuth,ClientPFController.remove);
 
 module.exports = router;
